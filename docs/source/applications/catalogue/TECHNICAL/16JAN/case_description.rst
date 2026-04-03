@@ -1,26 +1,63 @@
-2-domain grid-nesting
-============================================
+16JAN - January 16th Grid-Nesting Case
+=============================================================
 
-Case description
+**Category** : Technical  
+**Objective** : Demonstrate two-way grid-nesting (parent + child domains)
 
-listing des étapes techniques
+**Scientific Context & Specificity** :
 
-Specific numerical setup
-- rayonnement
-- LIMA...
-(Cas réel : tracer la topo avec echelle commune à tous)
+16JAN is a **technical demonstration case** for grid-nesting. Its uniqueness:
 
-Output intéressants
+- Tests **two-way nesting** between parent and child
+- Validates **AROME/ARPEGE** data initialization
+- Demonstrates **convection-permitting** nesting workflow
 
-Figures
-Lien vers le pdf
+Unlike other technical cases:
 
-Ressources numériques requises
-- ver_user
-- noeud/procs du run, elapsed 
+- GRIB tests **data input**; 16JAN tests **nesting coupling**
+- DOUBLE_GRIDNESTING uses **three domains**; 16JAN uses **two domains**
+- Demonstrates **operational** nesting configuration
 
+Domain structure:
 
-Classements
-- cas idéalisés/ cas réels applications
+- Coarse domain (36 km): from ARPEGE
+- Fine domain (9 km): from AROME
 
-Tableau général avec cas test vs options physiques activées, grid-nesting, 
+**Technical Specificities** :
+
+This case demonstrates Meso-NH's **grid-nesting** capabilities.
+
+Key characteristics:
+
+- Two-way coupling (XWAY = 1. or 2.)
+- Temporal nesting ratio (NDTRATIO)
+- Lateral boundary relaxation
+
+**Validation Targets** :
+
+- Nesting interpolation
+- Upward and downward coupling
+- Conservation
+
+**Execution** :
+
+.. code-block:: bash
+
+   cd integration_cases/...
+   # Run coarse domain first
+   ./run_coarse
+   # Then fine domain
+   ./run_fine
+
+**Numerical Resources** :
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40 60
+
+   * - Configuration
+     - Resources
+   * - Coarse (36km)
+     - 4-16 processors
+   * - Fine (9km)
+     - 32-64 processors

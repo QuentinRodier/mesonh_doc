@@ -1,26 +1,67 @@
-ICCARE Corse
-============================================
+ICCARE_CORSE - Ionian Cloud Condensation Aerosol Research Experiment (Corsica)
+==========================================================================
 
-Case description
+**Category** : Realistic  
+**Objective** : Marine aerosol and cloud interactions around Corsica
 
-listing des étapes techniques
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
 
-Specific numerical setup
-- rayonnement
-- LIMA...
-(Cas réel : tracer la topo avec echelle commune à tous)
+   * - Parameter
+     - Value
+   * - Location
+     - Corsica island
+   * - Resolution
+     - Dx=0.5-2km
+   * - Duration
+     - 24h
+   * - Turbulence
+     - TKEL + 1D/3D-BL89
+   * - Microphysics
+     - LIMA
+   * - Chemistry
+     - ORILAM (aerosols)
 
-Output intéressants
+**Scientific Context & Specificity** :
 
-Figures
-Lien vers le pdf
+ICCARE_CORSE focuses on **marine aerosol-cloud** interactions. Its uniqueness:
 
-Ressources numériques requises
-- ver_user
-- noeud/procs du run, elapsed 
+- Tests **island wake** effects on clouds
+- Uses **Corsica** realistic location
+- Studies **marine aerosol** effects on convection
 
+Unlike other realistic cases:
 
-Classements
-- cas idéalisés/ cas réels applications
+- BIOMAIDIO is **La Réunion**; ICCARE is **Corsica**
+- Tests **3D turbulence** effects
+- Demonstrates **Mediterranean island** meteorology
 
-Tableau général avec cas test vs options physiques activées, grid-nesting, 
+**Technical Specificities** :
+
+Key characteristics:
+
+- LIMA microphysics
+- ORILAM aerosol scheme
+- High resolution (500m)
+
+**Validation Targets** :
+
+- Island wake structure
+- Cloud-aerosol interactions
+- Orographic effects
+
+**Numerical Resources** :
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
+
+   * - Parameter
+     - Value
+   * - Nodes
+     - 20
+   * - Processors
+     - 1920
+   * - Runtime
+     - 12 hours

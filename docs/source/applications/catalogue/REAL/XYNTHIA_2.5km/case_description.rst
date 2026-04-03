@@ -1,26 +1,62 @@
-Xynthia storm
-============================================
+XYNTHIA_2.5km - Storm Xynthia (2010)
+=============================================================
 
-Case description
+**Category** : Realistic  
+**Objective** : Simulate Storm Xynthia (February 2010) over Western France
 
-listing des étapes techniques
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
 
-Specific numerical setup
-- rayonnement
-- LIMA...
-(Cas réel : tracer la topo avec echelle commune à tous)
+   * - Parameter
+     - Value
+   * - Location
+     - Western France / Bay of Biscay
+   * - Resolution
+     - Dx=2.5km
+   * - Duration
+     - ~24-48h
+   * - Turbulence
+     - TKEL + 1D-BL89
+   * - Microphysics
+     - ICE3/LIMA
+   * - Radiation
+     - ECMW
 
-Output intéressants
+**Scientific Context & Specificity** :
 
-Figures
-Lien vers le pdf
+XYNTHIA_2.5km simulates **Storm Xynthia** (February 26-28, 2010). Its uniqueness:
 
-Ressources numériques requises
-- ver_user
-- noeud/procs du run, elapsed 
+- Tests **extratropical cyclone** dynamics
+- Uses **high resolution** convection-permitting grid
+- Studies **storm surge** and **severe weather** impacts
 
+Unlike other realistic cases:
 
-Classements
-- cas idéalisés/ cas réels applications
+- CYCLONE simulates **generic** tropical cyclone; XYNTHIA simulates **specific historical** extratropical cyclone
+- Tests **severe weather** validation
+- Demonstrates **emergency response** modeling
 
-Tableau général avec cas test vs options physiques activées, grid-nesting, 
+The event:
+
+- Storm Xynthia: 26-28 February 2010
+- 53 casualties in France
+- Major storm surge on Atlantic coast
+
+**Technical Specificities** :
+
+Key characteristics:
+
+- High-resolution simulation (2.5km)
+- IFS initialization
+- ECMW radiation
+
+**Validation Targets** :
+
+- Surface pressure evolution
+- Wind speed peaks
+- Precipitation patterns
+
+**References** :
+
+- Xynthia storm documentation: https://en.wikipedia.org/wiki/Storm_Xynthia

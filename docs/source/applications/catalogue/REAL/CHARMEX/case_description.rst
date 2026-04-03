@@ -1,26 +1,73 @@
-CHARMEX chemistry + biogenic emission
-============================================
+CHARMEX - Chemistry and Mediterranean EXperiment
+=============================================================
 
-Case description
+**Category** : Realistic  
+**Objective** : Simulate Mediterranean chemistry with biogenic emissions
 
-listing des étapes techniques
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
 
-Specific numerical setup
-- rayonnement
-- LIMA...
-(Cas réel : tracer la topo avec echelle commune à tous)
+   * - Parameter
+     - Value
+   * - Location
+     - Mediterranean basin
+   * - Resolution
+     - Dx=50km
+   * - Duration
+     - 12h
+   * - Turbulence
+     - TKEL + 1D-BL89
+   * - Microphysics
+     - LIMA
+   * - Convection
+     - KAFR (deep)
+   * - Chemistry
+     - REPROCIS (isoprene, BVOC)
 
-Output intéressants
+**Scientific Context & Specificity** :
 
-Figures
-Lien vers le pdf
+CHARMEX is the **only Mediterranean chemistry case** in the catalog. Its uniqueness:
 
-Ressources numériques requises
-- ver_user
-- noeud/procs du run, elapsed 
+- Tests **biogenic VOC** emissions (isoprene, monoterpenes)
+- Uses **Mediterranean** realistic configuration
+- Studies **photochemical** pollution events
 
+Unlike other realistic cases:
 
-Classements
-- cas idéalisés/ cas réels applications
+- DUST focuses on **mineral dust**; CHARMEX focuses on **biogenic** chemistry
+- Tests **REPROCIS** gas-phase chemistry
+- Demonstrates **Mediterranean** specific chemistry
 
-Tableau général avec cas test vs options physiques activées, grid-nesting, 
+**Technical Specificities** :
+
+Key characteristics:
+
+- REPROCIS chemistry scheme
+- MEGAN biogenic emissions
+- ECRAD radiation coupling
+
+**Validation Targets** :
+
+- Ozone episodes
+- Isoprene concentrations
+- SOA formation
+
+**References** :
+
+- CHARMEX project documentation: https://charmex.lce.hypert止
+
+**Numerical Resources** :
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
+
+   * - Parameter
+     - Value
+   * - Nodes
+     - 1
+   * - Processors
+     - 4
+   * - Runtime
+     - 3h 20min

@@ -1,26 +1,58 @@
-KMAP
-============================================
+KMAP - K產品 MAP (Korea)
+=============================================================
 
-Case description
+**Category** : Realistic  
+**Objective** : Convection-permitting simulation over East Asia
 
-listing des étapes techniques
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
 
-Specific numerical setup
-- rayonnement
-- LIMA...
-(Cas réel : tracer la topo avec echelle commune à tous)
+   * - Parameter
+     - Value
+   * - Location
+     - East Asia (Korea)
+   * - Resolution
+     - Dx=2-32km (3 nests)
+   * - Duration
+     - 12h
+   * - Turbulence
+     - TKEL + 1D-BL89
+   * - Microphysics
+     - ICE3
+   * - Convection
+     - KAFR (deep)
+   * - Radiation
+     - ECRAD
 
-Output intéressants
+**Scientific Context & Specificity** :
 
-Figures
-Lien vers le pdf
+KMAP is a **convection-permitting** case for East Asia. Its uniqueness:
 
-Ressources numériques requises
-- ver_user
-- noeud/procs du run, elapsed 
+- Tests **convection-permitting** resolution (2km)
+- Uses **Korean** location and IFS data
+- Studies **mesoscale convective systems**
 
+Unlike other realistic cases:
 
-Classements
-- cas idéalisés/ cas réels applications
+- All other cases focus on **Europe**; KMAP focuses on **East Asia**
+- Tests **ECRAD radiation** scheme
+- Demonstrates **multi-scale** nesting (32→8→2km)
 
-Tableau général avec cas test vs options physiques activées, grid-nesting, 
+**Technical Specificities** :
+
+Key characteristics:
+
+- Triple nesting (32km → 8km → 2km)
+- IFS initialization
+- ECRAD radiation
+
+**Validation Targets** :
+
+- Convective initiation
+- Precipitation patterns
+- Cloud structure
+
+**References** :
+
+- KMAP project documentation

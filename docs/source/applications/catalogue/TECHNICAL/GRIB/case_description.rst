@@ -1,26 +1,52 @@
-GRIB interpolation
-============================================
+GRIB - GRIB Data Interpolation
+=============================================================
 
-Case description
+**Category** : Technical  
+**Objective** : Test GRIB file reading and horizontal interpolation from IFS/AROME data
 
-listing des étapes techniques
+**Scientific Context & Specificity** :
 
-Specific numerical setup
-- rayonnement
-- LIMA...
-(Cas réel : tracer la topo avec echelle commune à tous)
+GRIB is a **technical demonstration case** for data input. Its uniqueness:
 
-Output intéressants
+- Tests **GRIB file reading** capabilities
+- Validates **horizontal interpolation** from coarse to fine grid
+- Demonstrates **PREP_IDEA** with external data
 
-Figures
-Lien vers le pdf
+Unlike other technical cases:
 
-Ressources numériques requises
-- ver_user
-- noeud/procs du run, elapsed 
+- 16JAN tests **grid-nesting**; GRIB tests **data input pipeline**
+- DOUBLE_GRIDNESTING tests **multi-domain coupling**; GRIB tests **data assimilation prep**
+- Demonstrates **operational workflow** for real-case initialization
 
+This case validates:
+- GRIB API functionality
+- Interpolation schemes (bilinear, bicubic)
+- Vertical interpolation methods
 
-Classements
-- cas idéalisés/ cas réels applications
+**Technical Specificities** :
 
-Tableau général avec cas test vs options physiques activées, grid-nesting, 
+Key validation points:
+
+- GRIB format support (GRIB1/GRIB2)
+- Horizontal interpolation accuracy
+- Vertical level mapping
+- Missing value handling
+
+**Execution** :
+
+.. code-block:: bash
+
+   cd integration_cases/...
+   # Read GRIB and interpolate to Meso-NH grid
+   ./run_prep_grib
+
+**Numerical Resources** :
+
+- **Architecture** : Local
+- **Processors** : 1
+- **Memory** : < 1 GB
+- **Runtime** : < 5 minutes
+
+**References** :
+
+- ECMWF: https://confluence.ecmwf.int/display/UDOCK/GRIB+API+functions

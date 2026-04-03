@@ -1,26 +1,58 @@
-Sea salt aerosols in cyclone
-============================================
+SALT - Sea-Salt Aerosols in Cyclone
+=============================================================
 
-Case description
+**Category** : Realistic  
+**Objective** : Simulate sea-salt aerosol transport in tropical cyclone
 
-listing des étapes techniques
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
 
-Specific numerical setup
-- rayonnement
-- LIMA...
-(Cas réel : tracer la topo avec echelle commune à tous)
+   * - Parameter
+     - Value
+   * - Location
+     - La Réunion (Indian Ocean)
+   * - Resolution
+     - Dx=5-25km
+   * - Duration
+     - 18h
+   * - Turbulence
+     - TKEL + 1D-BL89
+   * - Microphysics
+     - ICE3
+   * - Convection
+     - KAFR (deep)
+   * - Chemistry
+     - ORILAM (sea-salt)
 
-Output intéressants
+**Scientific Context & Specificity** :
 
-Figures
-Lien vers le pdf
+SALT focuses on **sea-salt aerosol** transport in cyclones. Its uniqueness:
 
-Ressources numériques requises
-- ver_user
-- noeud/procs du run, elapsed 
+- Tests **sea-salt emission** parameterization
+- Uses **La Réunion** configuration
+- Studies **aerosol-cyclone** interactions
 
+Unlike other realistic cases:
 
-Classements
-- cas idéalisés/ cas réels applications
+- BIOMAIDIO focuses on **general marine aerosols**; SALT focuses on **cyclone conditions**
+- Tests **sea-salt injection** by high winds
+- Demonstrates **tropical cyclone** aerosol dynamics
 
-Tableau général avec cas test vs options physiques activées, grid-nesting, 
+**Technical Specificities** :
+
+Key characteristics:
+
+- ORILAM aerosol scheme
+- Sea-salt emissions from waves
+- KAFR deep convection
+
+**Validation Targets** :
+
+- Sea-salt vertical distribution
+- Cyclone aerosol interactions
+- Radiative impacts
+
+**References** :
+
+- Lewis, E. R., and Schwartz, S. E. (2004). "Sea Salt Aerosol Production." *Rev. Geophys.*, 42, RG2003.

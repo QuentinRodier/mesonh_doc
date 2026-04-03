@@ -1,26 +1,73 @@
-ICART
-============================================
+ICART2M - Intensive Cloud And Radiation Testbed
+=============================================================
 
-Case description
+**Category** : Realistic  
+**Objective** : Cloud and radiation interactions over land
 
-listing des étapes techniques
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
 
-Specific numerical setup
-- rayonnement
-- LIMA...
-(Cas réel : tracer la topo avec echelle commune à tous)
+   * - Parameter
+     - Value
+   * - Location
+     - Southwestern France
+   * - Resolution
+     - Dx=2.5-15km
+   * - Duration
+     - 3h
+   * - Turbulence
+     - TKEL + 1D-BL89
+   * - Microphysics
+     - ICE3
+   * - Convection
+     - EDKF (shallow), KAFR (deep)
+   * - Radiation
+     - ECMW
 
-Output intéressants
+**Scientific Context & Specificity** :
 
-Figures
-Lien vers le pdf
+ICART2M is a **cloud-radiation testbed** case. Its uniqueness:
 
-Ressources numériques requises
-- ver_user
-- noeud/procs du run, elapsed 
+- Tests **cloud-radiation** interactions
+- Uses **Southwest France** configuration
+- Studies **boundary layer** cloud processes
 
+Unlike other realistic cases:
 
-Classements
-- cas idéalisés/ cas réels applications
+- FOG focuses on **fog**; ICART focuses on **boundary layer clouds**
+- Tests **ECMW radiation** coupling
+- Demonstrates **continental** cloud modeling
 
-Tableau général avec cas test vs options physiques activées, grid-nesting, 
+**Technical Specificities** :
+
+Key characteristics:
+
+- IFS initialization
+- Multi-resolution nesting (15km → 2.5km)
+- ECMW radiation scheme
+
+**Validation Targets** :
+
+- Cloud fraction evolution
+- Radiative fluxes
+- Cloud optical properties
+
+**References** :
+
+- ICART campaign documentation
+
+**Numerical Resources** :
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
+
+   * - Parameter
+     - Value
+   * - Nodes
+     - 1
+   * - Processors
+     - 4
+   * - Runtime
+     - 1 hour

@@ -1,26 +1,71 @@
-BIOMAIDO chemistry + aerosols (sea-salt, anthropogenic, DMS)
-============================================
+BIOMAIDIO - Marine Biogeochemistry (La Réunion)
+=============================================================
 
-Case description
+**Category** : Realistic  
+**Objective** : Simulate marine aerosol and biogeochemistry around La Réunion
 
-listing des étapes techniques
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
 
-Specific numerical setup
-- rayonnement
-- LIMA...
-(Cas réel : tracer la topo avec echelle commune à tous)
+   * - Parameter
+     - Value
+   * - Location
+     - La Réunion island
+   * - Resolution
+     - Dx=2-8km
+   * - Duration
+     - 6h
+   * - Turbulence
+     - TKEL + 1D-BL89
+   * - Microphysics
+     - LIMA
+   * - Chemistry
+     - ORILAM (aerosols)
 
-Output intéressants
+**Scientific Context & Specificity** :
 
-Figures
-Lien vers le pdf
+BIOMAIDIO is the **only marine biogeochemistry case** in the catalog. Its uniqueness:
 
-Ressources numériques requises
-- ver_user
-- noeud/procs du run, elapsed 
+- Tests **marine aerosol** parameterization (sea-salt, DMS)
+- Uses **La Réunion** realistic location
+- Studies **biogeochemical** emissions and impacts
 
+Unlike other realistic cases:
 
-Classements
-- cas idéalisés/ cas réels applications
+- DUST focuses on **Saharan** dust; BIOMAIDIO focuses on **marine** aerosols
+- Tests **ORILAM** aerosol scheme
+- Demonstrates **marine-atmosphere** coupling
 
-Tableau général avec cas test vs options physiques activées, grid-nesting, 
+**Technical Specificities** :
+
+Key characteristics:
+
+- ORILAM aerosol scheme
+- Sea-salt emissions
+- DMS (dimethyl sulfide) chemistry
+
+**Validation Targets** :
+
+- Sea-salt concentration
+- DMS oxidation products
+- Aerosol optical depth
+
+**References** :
+
+- CHARMEX project: https://charmex.lce.hypert止
+
+**Numerical Resources** :
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
+
+   * - Parameter
+     - Value
+   * - Nodes
+     - 1
+   * - Processors
+     - 64
+   * - Runtime
+     - 4h 30min
