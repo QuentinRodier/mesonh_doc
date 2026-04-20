@@ -1,55 +1,26 @@
-RECYCLING - LES Recycling Technique
-=============================================================
+Recycling turbulence
+============================================
 
-**Category** : Idealized · Technical (LES)  
-**Objective** : Demonstrate the recycling technique for LES initialization
+Case description
 
-.. list-table::
-   :header-rows: 1
-   :widths: 25 75
+listing des étapes techniques
 
-   * - Parameter
-     - Value
-   * - Type
-     - LES with recycling
-   * - Turbulence
-     - Explicit (LES mode)
-   * - Recycling
-     - Lateral boundary recycling
+Specific numerical setup
+- rayonnement
+- LIMA...
+(Cas réel : tracer la topo avec echelle commune à tous)
 
-**Scientific Context & Specificity** :
+Output intéressants
 
-RECYCLING demonstrates the **lateral boundary recycling technique** for LES. Its uniqueness:
+Figures
+Lien vers le pdf
 
-- Tests **periodic-like** behavior in finite domains
-- Uses **recycling planes** to maintain turbulence
-- Studies **inflow turbulence** generation
+Ressources numériques requises
+- ver_user
+- noeud/procs du run, elapsed 
 
-Unlike other cases:
 
-- All other cases use **standard boundaries**; RECYCLING uses **recycling technique**
-- Tests **turbulence inflow** methods
-- Demonstrates **LES setup** workflow
+Classements
+- cas idéalisés/ cas réels applications
 
-**Technical Specificities** :
-
-Key namelist sections:
-
-.. code-block:: fortran
-
-   ! Recycling configuration
-   &NAM_RECYCL_PARAMn
-   LRECYCL = .TRUE.,             ! Enable recycling
-   LRECYCLW = .TRUE.,           ! West boundary
-   XDRECYCLW = 4.,             ! Recycling distance [m]
-   LRECYCLN = .FALSE.,
-   /
-   &NAM_MEAN
-   LMEAN_FIELD = .TRUE.,        ! Mean field computation
-   /
-
-**Validation Targets** :
-
-- Turbulence stationarity
-- Energy spectra
-- Mean profiles
+Tableau général avec cas test vs options physiques activées, grid-nesting, 

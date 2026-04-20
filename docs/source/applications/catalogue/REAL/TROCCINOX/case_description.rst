@@ -1,54 +1,26 @@
-TROCCINOX - TROCCINOX (Tropical Convection, Nitrogen Oxides, Ozone)
-================================================================
+TROCCINOX
+============================================
 
-**Category** : Realistic  
-**Objective** : Nitrogen oxides and ozone chemistry in tropical convection
+Case description
 
-.. list-table::
-   :header-rows: 1
-   :widths: 25 75
+listing des étapes techniques
 
-   * - Parameter
-     - Value
-   * - Location
-     - Tropics (South America)
-   * - Resolution
-     - Variable
-   * - Turbulence
-     - TKEL + 1D-BL89
-   * - Microphysics
-     - ICE3
-   * - Chemistry
-     - REPROCIS (NOx, O3)
+Specific numerical setup
+- rayonnement
+- LIMA...
+(Cas réel : tracer la topo avec echelle commune à tous)
 
-**Scientific Context & Specificity** :
+Output intéressants
 
-TROCCINOX focuses on **tropical nitrogen oxide** chemistry. Its uniqueness:
+Figures
+Lien vers le pdf
 
-- Tests **NOx chemistry** in convective systems
-- Studies **lightning NOx** production
-- Investigates **ozone formation** in the tropics
+Ressources numériques requises
+- ver_user
+- noeud/procs du run, elapsed 
 
-Unlike other realistic cases:
 
-- CHARMEX focuses on **Mediterranean VOC** chemistry; TROCCINOX focuses on **tropical NOx**
-- Tests **lightning NOx** parameterization
-- Demonstrates **tropical atmospheric chemistry**
+Classements
+- cas idéalisés/ cas réels applications
 
-**Technical Specificities** :
-
-Key characteristics:
-
-- REPROCIS chemistry scheme
-- NOx emissions from lightning
-- Tropical convection coupling
-
-**Validation Targets** :
-
-- NOx profiles
-- Ozone production
-- Convective transport
-
-**References** :
-
-- TROCCINOX project documentation
+Tableau général avec cas test vs options physiques activées, grid-nesting, 

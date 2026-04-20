@@ -1,58 +1,26 @@
-STATIONS_PROF_BALLOON_AIRCR_4doms - Multi-Platform Observations
-=============================================================
+I/O Budgets, stations, profilers, balloons, aicrafts
+============================================
 
-**Category** : Technical  
-**Objective** : Demonstrate I/O for stations, profilers, balloons, and aircraft observations
+Case description
 
-**Scientific Context & Specificity** :
+listing des étapes techniques
 
-STATIONS_PROF_BALLOON_AIRCR_4doms is a **technical demonstration case** for observation I/O. Its uniqueness:
+Specific numerical setup
+- rayonnement
+- LIMA...
+(Cas réel : tracer la topo avec echelle commune à tous)
 
-- Tests **4 domain configurations** with observation networks
-- Validates **observation extraction** from model output
-- Demonstrates **multi-platform** data handling (stations, profilers, balloons, aircraft)
+Output intéressants
 
-Unlike other technical cases:
+Figures
+Lien vers le pdf
 
-- All other cases test **model physics**; this tests **I/O systems**
-- Demonstrates **data assimilation prep** workflow
-- Tests **observation operator** capabilities
+Ressources numériques requises
+- ver_user
+- noeud/procs du run, elapsed 
 
-Observation platforms:
 
-- Surface stations (SYNOP, AWS)
-- Wind profilers (U/V wind profiles)
-- Radiosondes (balloons)
-- Aircraft (AMDAR)
+Classements
+- cas idéalisés/ cas réels applications
 
-**Technical Specificities** :
-
-Key I/O features tested:
-
-- NETCDF output format
-- Observation extraction routines
-- Time interpolation
-- Spatial interpolation
-
-**Validation Targets** :
-
-- Output format compliance
-- Interpolation accuracy
-- Complete metadata
-
-**Execution** :
-
-.. code-block:: bash
-
-   cd integration_cases/...
-   # Run simulation
-   ./run_mesonh
-   # Extract observations
-   ./extract_obs
-
-**Numerical Resources** :
-
-- **Architecture** : Local or HPC
-- **Processors** : 1-4
-- **Memory** : < 1 GB
-- **Runtime** : < 1 hour
+Tableau général avec cas test vs options physiques activées, grid-nesting, 

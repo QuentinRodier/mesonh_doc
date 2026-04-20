@@ -1,93 +1,26 @@
-HAIC - High Altitude Ice Clouds (Guyana)
-=============================================================
+HAIC deep convection in Guyana
+============================================
 
-**Category** : Realistic  
-**Objective** : Simulate deep convection and ice clouds over Guyana
+Case description
 
-.. list-table::
-   :header-rows: 1
-   :widths: 25 75
+listing des étapes techniques
 
-   * - Parameter
-     - Value
-   * - Dimensions (X×Y×Z)
-     - 360 × 250 × 70
-   * - Resolution
-     - Dx=2500m, Dz=30m
-   * - Simulation duration
-     - 24 h
-   * - Time step
-     - 10 s
-   * - Boundary conditions
-     - OPEN (from AROME)
-   * - Coriolis
-     - Yes
-   * - Advection
-     - CEN4TH + RKC4
-   * - Turbulence
-     - TKEL + 1D-BL89
-   * - Surface
-     - SURFEX
-   * - Radiation
-     - ECMW/ECRAD
-   * - Microphysics
-     - ICE3/LIMA
-   * - Convection shallow
-     - EDKF
+Specific numerical setup
+- rayonnement
+- LIMA...
+(Cas réel : tracer la topo avec echelle commune à tous)
 
-**Scientific Context & Specificity** :
+Output intéressants
 
-HAIC is the **only Guyana/South America case** in the catalog. Its uniqueness:
+Figures
+Lien vers le pdf
 
-- Tests **tropical deep convection** parameterization
-- Uses **Guyana** realistic terrain
-- Studies **high ice clouds** and cirrus anvils
+Ressources numériques requises
+- ver_user
+- noeud/procs du run, elapsed 
 
-Unlike other realistic cases:
 
-- All other cases focus on **European** weather; HAIC focuses on **tropical** convection
-- Tests **ECRAD radiation** coupling
-- Demonstrates **tropical meteorology** modeling
+Classements
+- cas idéalisés/ cas réels applications
 
-The case simulates:
-- Tropical convective systems
-- Ice cloud anvils
-- Mesoscale organization
-
-**Technical Specificities** :
-
-This case demonstrates Meso-NH's **tropical convection** modeling capabilities.
-
-Key characteristics:
-
-- AROME initialization
-- ECRAD radiation scheme
-- EDKF shallow convection
-
-**Validation Targets** :
-
-- Convective onset time
-- Cloud top heights
-- Precipitation patterns
-
-**Execution** :
-
-.. code-block:: bash
-
-   cd integration_cases/...
-   sbatch run_mesonh
-
-**Numerical Resources** :
-
-.. list-table::
-   :header-rows: 1
-   :widths: 25 75
-
-   * - Parameter
-     - Value
-   * - Nodes
-     - 8
-   * - Processors
-     - 1024
-   * - Runtime
-     - 5 hours
+Tableau général avec cas test vs options physiques activées, grid-nesting, 
